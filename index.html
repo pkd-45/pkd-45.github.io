@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pratyush Kumar Das | Astrophysics, Data, and Beyond</title>
+  <meta name="description" content="Pratyush Kumar Das is a final-year astrophysics PhD researcher working on galaxy kinematics, IFU spectroscopy, simulations, machine learning, and scientific visual storytelling." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <canvas id="particleCanvas" class="particle-canvas" aria-hidden="true"></canvas>
+  <div class="bg-orb orb-1" aria-hidden="true"></div>
+  <div class="bg-orb orb-2" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="Pratyush Kumar Das home">
+        <span class="brand-mark">PKD</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="mainNav" aria-label="Primary">
+        <button class="nav-link is-active" type="button" data-tab="home">Home</button>
+        <button class="nav-link" type="button" data-tab="research">Research</button>
+        <button class="nav-link" type="button" data-tab="education">Education</button>
+        <button class="nav-link" type="button" data-tab="publications">Publications</button>
+        <button class="nav-link" type="button" data-tab="awards">Awards and Conferences</button>
+        <button class="nav-link" type="button" data-tab="service">Service</button>
+        <button class="nav-link" type="button" data-tab="beyond">Beyond Academia</button>
+        <button class="nav-link" type="button" data-tab="contact">Contact</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="tab-shell">
+<section class="tab-panel is-active" id="home" data-panel="home">
+<div class="container home-minimal-wrap">
+  <div class="home-minimal home-minimal-split">
+    <div class="home-photo-shell">
+      <img src="assets/profile-photo.jpg" alt="Portrait of Pratyush Kumar Das" class="profile-photo home-photo-minimal" />
+    </div>
+<div class="home-copy-minimal">
+  <p class="home-role">
+    PhD @
+    <a href="https://www.uq.edu.au/" target="_blank" rel="noopener noreferrer">The University of Queensland</a>
+  </p>
+
+  <h1 class="home-name">Pratyush Kumar Das</h1>
+
+
+
+  <div class="home-meta-group">
+    <div class="home-skill-pills">
+      <span class="skill-pill">Computational astrophysics</span>
+      <span class="skill-pill">Observational astronomy</span>
+      <span class="skill-pill">Machine learning</span>
+    </div>
+  </div>
+    <p class="home-line">
+    Exploring the connections between <span>galaxy structure</span>, <span>kinematics</span>, and <span>evolution</span>.
+  </p>
+  <div class="home-meta-group">
+    <p class="home-meta-label">Collaborations</p>
+    <div class="home-collab-links">
+      <a href="https://www.sami-survey.org/" target="_blank" rel="noopener noreferrer" class="collab-link">SAMI</a>
+      <a href="https://hector.survey.org.au/" target="_blank" rel="noopener noreferrer" class="collab-link">Hector</a>
+      <a href="https://magpisurvey.org/" target="_blank" rel="noopener noreferrer" class="collab-link">MAGPI</a>
+      <a href="https://doi.org/10.1093/mnras/stz937" target="_blank" rel="noopener noreferrer" class="collab-link">Simba</a>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<section class="tab-panel" id="research" data-panel="research">
+  <div class="container panel-space research-simple-top">
+    <div class="research-interest-strip centered-interest-strip">
+      <span class="skill-pill">Galaxy evolution</span>
+      <span class="skill-pill">Angular momentum</span>
+      <span class="skill-pill">Metallicity gradients</span>
+      <span class="skill-pill">Outflows</span>
+      <span class="skill-pill">AGN activity</span>
+      <span class="skill-pill">Large scale survey</span>
+      <span class="skill-pill">Astro-ML</span>
+    </div>
+  </div>
+
+  <div class="container panel-space-sm">
+    <div class="research-projects-divider no-line-divider">
+      <span class="research-projects-label">Key projects</span>
+    </div>
+  </div>
+
+  <div class="container projects-accordion panel-space-sm">
+    <article class="card project-accordion-card is-open project-theme-orbit">
+      <button class="project-toggle" type="button" aria-expanded="true">
+        <span class="project-toggle-left">
+          <span class="project-icon project-icon-orbit" aria-hidden="true"><span class="icon-core"></span></span>
+          <span class="project-title-wrap">
+            <span class="project-title">Morphology in Motion</span>
+            <span class="project-subtitle">Kinematics • structure • modelling</span>
+          </span>
+        </span>
+        <span class="project-chevron" aria-hidden="true">⌄</span>
+      </button>
+      <div class="project-content">
+        <div class="project-content-inner">
+          <div class="project-chip-row">
+            <span>SAMI</span>
+            <span>Spinny</span>
+            <span>Angular momentum</span>
+          </div>
+          <p>
+            A project linking galaxy angular momentum to structure in the SAMI Galaxy Survey, including deprojection,
+            rotation-curve fitting, cumulative <em>j</em> profiles, and uncertainty-aware measurements.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <article class="card project-accordion-card project-theme-network">
+      <button class="project-toggle" type="button" aria-expanded="false">
+        <span class="project-toggle-left">
+          <span class="project-icon project-icon-network" aria-hidden="true"><span class="icon-core"></span></span>
+          <span class="project-title-wrap">
+            <span class="project-title">Galaxies into haloes</span>
+            <span class="project-subtitle">Machine learning • simulations</span>
+          </span>
+        </span>
+        <span class="project-chevron" aria-hidden="true">⌄</span>
+      </button>
+      <div class="project-content">
+        <div class="project-content-inner">
+          <div class="project-chip-row">
+            <span>Simba</span>
+            <span>ML</span>
+            <span>Halo-to-galaxy</span>
+          </div>
+          <p>
+            Building machine-learning frameworks that predict galaxy properties from dark-matter halo information,
+            connecting simulations to observations in a scalable and physically interpretable way.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <article class="card project-accordion-card project-theme-radio">
+      <button class="project-toggle" type="button" aria-expanded="false">
+        <span class="project-toggle-left">
+          <span class="project-icon project-icon-radio" aria-hidden="true"><span class="icon-core"></span></span>
+          <span class="project-title-wrap">
+            <span class="project-title">Hector–H I survey work</span>
+            <span class="project-subtitle">Observations • H I follow-up</span>
+          </span>
+        </span>
+        <span class="project-chevron" aria-hidden="true">⌄</span>
+      </button>
+      <div class="project-content">
+        <div class="project-content-inner">
+          <div class="project-chip-row">
+            <span>Hector</span>
+            <span>FAST</span>
+            <span>H I</span>
+          </div>
+          <p>
+            Exploring how resolved optical kinematics relate to global H I properties, with proposed FAST follow-up
+            aimed at calibrating low-mass and intermediate-mass systems.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <article class="card project-accordion-card project-theme-cube">
+      <button class="project-toggle" type="button" aria-expanded="false">
+        <span class="project-toggle-left">
+          <span class="project-icon project-icon-cube" aria-hidden="true"><span class="icon-core"></span></span>
+          <span class="project-title-wrap">
+            <span class="project-title">Complex spectral decomposition</span>
+            <span class="project-subtitle">IFU cubes • extraction • methods</span>
+          </span>
+        </span>
+        <span class="project-chevron" aria-hidden="true">⌄</span>
+      </button>
+      <div class="project-content">
+        <div class="project-content-inner">
+          <div class="project-chip-row">
+            <span>MUSE</span>
+            <span>IFU cubes</span>
+            <span>Extraction</span>
+          </div>
+          <p>
+            Developing tools to extract physically meaningful signals from IFU data cubes, including globular cluster
+            spectra, outflows, metallicity-gradient workflows, and survey-scale emission-line products.
+          </p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="tab-panel" id="education" data-panel="education">
+ 
+
+  <div class="container education-stack panel-space-sm">
+    <article class="card education-section-card education-featured-card">
+      <div class="education-meta-row">
+        <span class="edu-badge level">PhD</span>
+        <span class="edu-badge year">2023–Present</span>
+        <span class="edu-badge status current">Current</span>
+      </div>
+      <h3>Ph.D. Candidate in Astrophysics</h3>
+      <p class="education-place"><a href="https://smp.uq.edu.au/" target="_blank" rel="noopener">School of Mathematics and Physics</a>, <a href="https://www.uq.edu.au/" target="_blank" rel="noopener">The University of Queensland (UQ)</a>, Australia</p>
+      <div class="education-copy">
+        <p>Project: <em>Morphology in Motion: Linking Angular Momentum to Galactic Structure using Machine Learning</em>.</p>
+        <p>Research focuses on galaxy kinematics, morphology, angular momentum, IFU spectroscopy, and data-driven modelling.</p>
+        <p class="education-note">Supervisors: Dr. Sarah Sweet, Dr. Holger Baumgardt, Dr. Simon Deeley</p>
+      </div>
+    </article>
+
+    <article class="card education-section-card">
+      <div class="education-meta-row">
+        <span class="edu-badge level">Research Assistant</span>
+        <span class="edu-badge year">2021–2023</span>
+      </div>
+      <h3>Research Assistant</h3>
+      <p class="education-place"><a href="https://ifa.roe.ac.uk/" target="_blank" rel="noopener">Institute for Astronomy, University of Edinburgh</a>, Scotland</p>
+      <div class="education-copy">
+        <p>Worked with Prof. Romeel Davé and Dr. Weiguang Cui on halo-to-galaxy machine learning on the Simba cosmological simulation, focusing on scalable analysis workflows and model development for predicting galaxy properties from dark-matter halo information.</p>
+      </div>
+    </article>
+
+    <article class="card education-section-card">
+      <div class="education-meta-row">
+        <span class="edu-badge level">Integrated M.Sc.</span>
+        <span class="edu-badge year">2016–2021</span>
+      </div>
+      <h3>Integrated M.Sc. in Physics</h3>
+      <p class="education-place"><a href="https://www.niser.ac.in/" target="_blank" rel="noopener">National Institute of Science Education and Research (NISER)</a>, Odisha, India</p>
+      <div class="education-copy">
+        <p>Minor: Computer Science</p>
+      </div>
+    </article>
+
+    <article class="card education-section-card">
+      <div class="education-meta-row">
+        <span class="edu-badge level">Higher Secondary</span>
+        <span class="edu-badge year">2014–2016</span>
+      </div>
+      <h3>Class 10+2 (CHSE, Odisha)</h3>
+      <p class="education-place">Khallikote Junior College, Odisha, India</p>
+    </article>
+
+    <article class="card education-section-card">
+      <div class="education-meta-row">
+        <span class="edu-badge level">Secondary</span>
+        <span class="edu-badge year">2014</span>
+      </div>
+      <h3>Class 10 (BSE, Odisha)</h3>
+      <p class="education-place">Saraswati Shishu Vidya Mandir, Ramaharinagar, Odisha, India</p>
+    </article>
+  </div>
+</section>
+
+<section class="tab-panel" id="publications" data-panel="publications">
+  <div class="container publication-layout publication-stack panel-space-sm">
+    <article class="card publication-section-card">
+      <div class="card-head">
+        <h3>Published</h3>
+        <span class="badge">Refereed + white paper</span>
+      </div>
+      <ol class="pub-list-numbered">
+        <li>
+          <a href="https://doi.org/10.1093/mnras/staf2096" target="_blank" rel="noopener">
+            Populating Galaxies into Haloes via Machine Learning on the Simba Simulation
+          </a>
+        </li>
+        <li>
+          <a href="https://doi.org/10.1017/pasa.2025.10106" target="_blank" rel="noopener">
+            Hector Galaxy Survey: Data Processing, Quality Control, and Early Science
+          </a>
+        </li>
+        <li>
+          <a href="https://doi.org/10.1017/pasa.2026.10157" target="_blank" rel="noopener">
+            The SAMI Galaxy Survey: Quenching of Star Formation in Clusters III. Ram-Pressure-Affected Galaxy Populations
+          </a>
+        </li>
+        <li>
+          <a href="https://doi.org/10.48550/arXiv.2512.14281" target="_blank" rel="noopener">
+            Connecting Galaxies with Their Haloes — from Parsec to Mpc Scales
+          </a>
+          <span class="pub-note">White paper</span>
+        </li>
+      </ol>
+    </article>
+
+    <article class="card publication-section-card">
+      <div class="card-head">
+        <h3>Under review</h3>
+        <span class="badge muted">Current manuscripts</span>
+      </div>
+      <ol class="pub-list-numbered">
+        <li>
+          Hector Galaxy Survey: Linking the Low- and High-Mass Ends of the Initial Mass Function in Star-Forming Galaxies
+          <span class="meta">Diego Salvador et al.</span>
+        </li>
+        <li>
+          Hector Galaxy Survey: Falling in Between — Infalling Galaxies in the Midst of the Abell 3667 Merger
+          <span class="meta">Oguzhan Cakir et al.</span>
+        </li>
+      </ol>
+    </article>
+
+    <article class="card publication-section-card">
+      <div class="card-head">
+        <h3>In preparation</h3>
+        <span class="badge muted">Working titles</span>
+      </div>
+      <ol class="pub-list-numbered pub-list-two-col">
+        <li>
+          Morphology in Motion: Linking Angular Momentum to Galactic Structure in the SAMI Galaxy Survey
+          <span class="meta">PK Das et al.</span>
+        </li>
+        <li>
+          Galaxy Kinematic Evolution from IllustrisTNG to the Hector Galaxy Survey
+          <span class="meta">PK Das et al.</span>
+        </li>
+        <li>
+          Connecting Metallicity Gradients to Galaxy Kinematics in the Hector Galaxy Survey
+          <span class="meta">PK Das et al.</span>
+        </li>
+        <li>
+          Predicting AGN Activity from IFU Spectra with Neural Networks in the MaNGA and SAMI Galaxy Surveys
+          <span class="meta">Bruna Lima &amp; PK Das et al.</span>
+        </li>
+        <li>
+          Extracting Pure Globular Cluster Spectra from MUSE Observations of Galaxies with Complex Morphologies
+          <span class="meta">Niranjana Prashantha et al.</span>
+        </li>
+        <li>
+          <em>tapioca</em>: A Scalable Framework for Outflow Detection and Modeling in IFU Data Cubes
+          <span class="meta">Emma Lundqvist et al.</span>
+        </li>
+        <li>
+          Connecting Small Scales to Galaxy-Wide Scales: The Link Between CenA’s Major Merger Event, AGN Activity, and Small-Scale Star Formation at Our Nearest ETG
+          <span class="meta">Cecilia Arrizabalaga et al.</span>
+        </li>
+
+        <li>
+          Hector Galaxy Survey: Optical IFU and Chandra Reveal a Low-Luminosity AGN Behind Extended LINER Emission
+          <span class="meta">Kyuseok Oh et al.</span>
+        </li>
+        <li>
+          Hector Galaxy Survey: Stellar Population Gradients in Elliptical Galaxies Out to Two Effective Radii Across Clusters, Infall Regions, and the Field
+          <span class="meta">Joon Hyeop Lee et al.</span>
+        </li>
+        <li>
+          Hector Galaxy Survey: Forward-Modelled Gas-Phase Metallicity Gradients in Galaxies
+          <span class="meta">Yifan Mai et al.</span>
+        </li>
+        <li>
+          The MAGPI Survey: Emission Line Products Data Release and the Role of Spectroscopic Aperture Covering Fraction on the Balmer Decrement–Stellar Mass Relation
+          <span class="meta">Andrew Battisti et al.</span>
+        </li>
+      </ol>
+    </article>
+
+    <article class="card publication-section-card">
+      <div class="card-head">
+        <h3>Observing proposals</h3>
+      </div>
+      <ol class="pub-list-numbered proposal-list">
+        <li>
+          <span class="proposal-main">How Typical Is the Local Group, Really?</span>
+          <span class="meta">2026A · AAT · Sarah Sweet et al.</span>
+          <span class="pub-status">Allocated</span>
+        </li>
+        <li>
+          <span class="proposal-main">The Hector Galaxy Survey</span>
+          <span class="meta">2024B · AAT · Julia Bryant et al.</span>
+          <span class="pub-status">Allocated</span>
+        </li>
+        <li>
+          <span class="proposal-main">The Hector Galaxy Survey</span>
+          <span class="meta">2025A · AAT · Julia Bryant et al.</span>
+          <span class="pub-status">Allocated</span>
+        </li>
+        <li>
+          <span class="proposal-main">The Hector Galaxy Survey</span>
+          <span class="meta">2025B · AAT · Julia Bryant et al.</span>
+          <span class="pub-status">Allocated</span>
+        </li>
+        <li>
+          <span class="proposal-main">The Hector Galaxy Survey</span>
+          <span class="meta">2026 · AAT · Julia Bryant et al.</span>
+          <span class="pub-status">Allocated</span>
+        </li>
+        <li>
+          <span class="proposal-main">The Hector–HI Survey</span>
+          <span class="meta">2026B · FAST · PK Das et al.</span>
+          <span class="pub-status submitted">Submitted</span>
+        </li>
+        <li>
+          <span class="proposal-main">UNDIMMING: Unveiling the Nature of Dust Inside MUSE Fields Using MIRI Imaging of Neighboring Galaxies</span>
+          <span class="meta">JWST Cycle 5 · JWST · Andrew Battisti et al.</span>
+          <span class="pub-status rejected">Not approved</span>
+        </li>
+        <li>
+          <span class="proposal-main">Catching Galaxies in the Act of Accretion: First JWST/NIRSpec View of a Blue-Dominated Lyman-alpha Nebula at z = 2.9</span>
+          <span class="meta">JWST Cycle 5 · JWST · Tamal Mukherjee et al.</span>
+          <span class="pub-status rejected">Not approved</span>
+        </li>
+      </ol>
+    </article>
+  </div>
+</section>
+
+<section class="tab-panel" id="awards" data-panel="awards">
+
+  <div class="container awards-travel-grid panel-space-sm">
+    <article class="card awards-travel-card awards-column-card">
+      <div class="awards-column-pill">Scholarships &amp; Awards</div>
+
+      <div class="award-entry-list award-entry-list-cards">
+        <div class="award-entry award-entry-card">
+          <div class="award-year">2023–Present</div>
+          <div class="award-copy">
+            <h4>Research Training Program (RTP) Scholarship</h4>
+            <p>University of Queensland — postgraduate research scholarship supporting PhD studies in astrophysics.</p>
+          </div>
+        </div>
+
+        <div class="award-entry award-entry-card">
+          <div class="award-year">2016–2021</div>
+          <div class="award-copy">
+            <h4>INSPIRE Scholarship</h4>
+            <p>MHRD, Government of India — awarded for the five-year integrated M.Sc. program.</p>
+          </div>
+        </div>
+
+        <div class="award-entry award-entry-card">
+          <div class="award-year">2021</div>
+          <div class="award-copy">
+            <h4>1st Place — Physics Speed Quiz Competition (PSQC21)</h4>
+            <p><a href="https://physeeks.com/psqc20-1/" target="_blank" rel="noopener">physeeks.com</a></p>
+          </div>
+        </div>
+
+        <div class="award-entry award-entry-card">
+          <div class="award-year">2020</div>
+          <div class="award-copy">
+            <h4>3rd Place — Annual International Astronomy &amp; Physics Competition (AIAPC20)</h4>
+            <p><a href="https://physeeks.com/annual-international-astronomy-and-physics-competition-2020-aiapc20/" target="_blank" rel="noopener">Competition listing</a></p>
+          </div>
+        </div>
+
+        <div class="award-entry award-entry-card">
+          <div class="award-year">2020</div>
+          <div class="award-copy">
+            <h4>Outstanding Performer — NAEST</h4>
+            <p><a href="https://www.concepts-of-physics.com/anveshika/naest-2020.php" target="_blank" rel="noopener">Competition listing</a></p>
+          </div>
+        </div>
+
+        <div class="award-entry award-entry-card">
+          <div class="award-year">2020</div>
+          <div class="award-copy">
+            <h4>National-level Topper (Prelims) — ABHIPRAJNA 2020</h4>
+            <p>IISER Tirupati</p>
+          </div>
+        </div>
+
+        <div class="award-entry award-entry-card">
+          <div class="award-year">2016</div>
+          <div class="award-copy">
+            <h4>Certified Telescope Handler</h4>
+            <p><a href="https://www.ioaastrophysics.org/about-ioaa/" target="_blank" rel="noopener">International Olympiad on Astronomy and Astrophysics</a></p>
+          </div>
+        </div>
+
+        <div class="award-entry award-entry-card">
+          <div class="award-year">2014–2016</div>
+          <div class="award-copy">
+            <h4>Pathani Samanta Mathematics Scholarship</h4>
+            <p>Government of Odisha</p>
+          </div>
+        </div>
+
+        <div class="award-entry award-entry-card">
+          <div class="award-year">2011</div>
+          <div class="award-copy">
+            <h4>Gold Medal — International Mathematics Olympiad (SOF IMO)</h4>
+            <p><a href="https://sofworld.org/imo" target="_blank" rel="noopener">Competition page</a></p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card awards-travel-card awards-column-card">
+      <div class="awards-column-pill">Conferences &amp; Workshops</div>
+
+      <div class="award-entry-list award-entry-list-cards">
+        <div class="award-entry award-entry-card">
+          <div class="award-year">2026</div>
+          <div class="award-copy">
+            <h4><a href="https://www.kicc.cam.ac.uk/events/beyondhubble-revisiting-hubble-sequence-across-cosmic-time" target="_blank" rel="noopener">Beyond Hubble</a></h4>
+            <p>Cambridge</p>
+          </div>
+        </div>
+
+        <div class="award-entry award-entry-card">
+          <div class="award-year">2026</div>
+          <div class="award-copy">
+            <h4><a href="https://eatgalaxiesgroup.com.br/hub-2026/" target="_blank" rel="noopener">HUB2026</a></h4>
+            <p>Bahia, Brazil</p>
+          </div>
+        </div>
+
+        <div class="award-entry award-entry-card">
+          <div class="award-year">2026</div>
+          <div class="award-copy">
+            <h4><a href="https://astron-soc.in/asi2026/" target="_blank" rel="noopener">ASI 2026</a></h4>
+            <p>IIT Guwahati</p>
+          </div>
+        </div>
+<div class="award-entry award-entry-card">
+  <div class="award-year">2024 Sep</div>
+  <div class="award-copy">
+    <h4>
+      <a href="https://www.mso.anu.edu.au/msss24/" target="_blank" rel="noopener noreferrer">
+        MSSS — Mount Stromlo Student Seminar
+      </a>
+    </h4>
+    <p>Participation</p>
+  </div>
+</div>
+
+<div class="award-entry award-entry-card">
+  <div class="award-year">2024 Jun</div>
+  <div class="award-copy">
+    <h4>
+      <a href="https://asa.astronomy.org.au/events/harley-wood-school/" target="_blank" rel="noopener noreferrer">
+        HWSA — Harley Wood School for Astronomy
+      </a>
+    </h4>
+    <p>SOC member of the national astronomy school for postgraduate students in Australia.</p>
+  </div>
+</div>
+
+<div class="award-entry award-entry-card">
+  <div class="award-year">2024</div>
+  <div class="award-copy">
+    <h4>
+      <a href="https://wavesurvey.org/news/" target="_blank" rel="noopener noreferrer">
+        WAVES Kick-off Meeting
+      </a>
+    </h4>
+    <p>Project kick-off / collaboration meeting</p>
+  </div>
+</div>
+
+<div class="award-entry award-entry-card">
+  <div class="award-year">2023–Present</div>
+  <div class="award-copy">
+    <h4>
+      <a href="https://aat.anu.edu.au/science/observing/with-AAO-telescopes" target="_blank" rel="noopener noreferrer">
+        Observing at the Anglo-Australian Telescope (AAT)
+      </a>
+    </h4>
+    <p>33 nights of observing.</p>
+  </div>
+</div>
+        <div class="award-entry award-entry-card">
+          <div class="award-year">2020</div>
+          <div class="award-copy">
+            <h4><a href="https://cxc.harvard.edu/cdo/cxctds2020/" target="_blank" rel="noopener">Chandra Frontiers in Time-Domain Science</a></h4>
+            <p>Workshop</p>
+          </div>
+        </div>
+
+        <div class="award-entry award-entry-card">
+          <div class="award-year">2020</div>
+          <div class="award-copy">
+            <h4>5th International Conference on Particle Physics and Astrophysics</h4>
+            <p>Conference</p>
+          </div>
+        </div>
+
+        <div class="award-entry award-entry-card">
+          <div class="award-year">2020</div>
+          <div class="award-copy">
+            <h4><a href="https://www.icts.res.in/program/peu" target="_blank" rel="noopener">Physics of the Early Universe (ICTS-TIFR)</a></h4>
+            <p>Bangalore</p>
+          </div>
+        </div>
+
+        <div class="award-entry award-entry-card">
+          <div class="award-year">2019</div>
+          <div class="award-copy">
+            <h4><a href="https://web.iucaa.in/~rpl/WinterSchool.html" target="_blank" rel="noopener">Radio Astronomy Winter School (IUCAA)</a></h4>
+            <p>Pune</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+<section class="tab-panel" id="service" data-panel="service">
+  <div class="container section-head panel-space">
+    <p class="section-lead">
+      I care about building research and learning communities that are rigorous, supportive, and accessible.
+    </p>
+  </div>
+
+  <div class="container service-stack panel-space-sm">
+    <article class="card service-section-card">
+      <div class="service-card-top">
+        <span class="service-card-icon" aria-hidden="true">✦</span>
+        <div>
+          <p class="service-card-kicker">Outreach</p>
+          <h3>Community and public engagement</h3>
+        </div>
+      </div>
+
+      <ul class="service-list">
+        <li><strong>“Ask an Expert” — Laura Street Festival (2024):</strong> answered public astronomy questions and discussed space science with visitors.</li>
+        <li><strong>NISER Astronomy Club — Core member:</strong> supported telescope sessions, outreach activities, and student-facing talks.</li>
+        <li><strong>Community welfare visits:</strong> participated in visits to old-age homes and homes for specially abled children.</li>
+        <li><strong>Education outreach:</strong> mentored underprivileged children and supported access to education.</li>
+      </ul>
+    </article>
+
+    <article class="card service-section-card">
+      <div class="service-card-top">
+        <span class="service-card-icon" aria-hidden="true">⌘</span>
+        <div>
+          <p class="service-card-kicker">Teaching</p>
+          <h3>Tutoring and student support</h3>
+        </div>
+      </div>
+
+      <ul class="service-list">
+        <li><a href="https://programs-courses.uq.edu.au/course.html?course_code=PHYS1001" target="_blank" rel="noopener">PHYS1001</a> — Mechanics &amp; Thermal Physics</li>
+        <li><a href="https://programs-courses.uq.edu.au/course.html?course_code=PHYS2020" target="_blank" rel="noopener">PHYS2020</a> — Thermodynamics &amp; Condensed Matter Physics</li>
+        <li><a href="https://programs-courses.uq.edu.au/course.html?course_code=PHYS2055" target="_blank" rel="noopener">PHYS2055</a> — Fields in Physics I</li>
+        <li><a href="https://programs-courses.uq.edu.au/course.html?course_code=PHYS2082" target="_blank" rel="noopener">PHYS2082</a> — Space Science &amp; Stellar Astrophysics</li>
+        <li><a href="https://programs-courses.uq.edu.au/course.html?course_code=COSC2500" target="_blank" rel="noopener">COSC2500</a> — Numerical Methods in Computational Science</li>
+        <li><a href="https://programs-courses.uq.edu.au/course.html?course_code=COSC3000" target="_blank" rel="noopener">COSC3000</a> — Visualization, Computer Graphics &amp; Data Analysis</li>
+        <li><a href="https://smp.uq.edu.au/current-students/first-year-learning-centres" target="_blank" rel="noopener">PLC</a> — Physics Learning Centre</li>
+      </ul>
+    </article>
+
+    <article class="card service-section-card">
+      <div class="service-card-top">
+        <span class="service-card-icon" aria-hidden="true">▣</span>
+        <div>
+          <p class="service-card-kicker">Leadership</p>
+          <h3>Roles and responsibilities</h3>
+        </div>
+      </div>
+
+      <ul class="service-list two-col-service-list">
+        <li><strong><a href="https://asa.astronomy.org.au/events/harley-wood-school/" target="_blank" rel="noopener">Harley Wood School of Astronomy</a> — Organising Committee:</strong> helped organise and support a national postgraduate astronomy school in Australia.</li>
+        <li><strong><a href="https://smp.uq.edu.au/about/equity-diversity-inclusion" target="_blank" rel="noopener">EDI Committee Member</a>:</strong> <a href="https://smp.uq.edu.au/" target="_blank" rel="noopener">School of Mathematics and Physics</a>, <a href="https://www.uq.edu.au/" target="_blank" rel="noopener">The University of Queensland</a>.</li>
+        <li><strong><a href="https://smp.uq.edu.au/students-smp-postgraduate-association-sos" target="_blank" rel="noopener">Vice-President (Physics) and Secretary</a>:</strong> Students of SMP Postgraduate Association (SOS), UQ.</li>
+        <li><strong><a href="https://zaariya.wixsite.com/zaariya" target="_blank" rel="noopener">Vice President</a>:</strong> Zaariya Social Service Club, contributing to education-focused outreach.</li>
+        <li><strong>Cricket:</strong> represented NISER at national level and won silver at the Inter IISER Sports Meet in 2017.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="tab-panel" id="beyond" data-panel="beyond">
+
+
+  <div class="container beyond-grid beyond-grid-2x2 panel-space-sm">
+    <article class="card fun-card">
+      <span class="fun-icon">🏋️</span>
+      <h3>Weightlifting</h3>
+    </article>
+
+    <article class="card fun-card">
+      <span class="fun-icon">♟️</span>
+      <h3>Chess</h3>
+    </article>
+
+<article class="card fun-card">
+  <span class="fun-icon">🏏 🏸</span>
+  <h3>Cricket and Badminton</h3>
+</article>
+
+    <article class="card fun-card">
+      <span class="fun-icon">📷</span>
+      <h3>Photography</h3>
+    </article>
+  </div>
+</section>
+
+<section class="tab-panel" id="contact" data-panel="contact">
+  <div class="container contact-shell card panel-space">
+    <div>
+      <p class="section-kicker">Contact</p>
+      <h2>Let’s connect</h2>
+      <p class="section-lead left">I am always happy to talk about galaxy evolution, machine learning in astronomy, collaborative projects, talks, or interesting data problems.</p>
+    </div>
+
+    <div class="contact-grid">
+      <a class="contact-item" href="mailto:p.das@uq.edu.au"><span class="contact-label">Email</span><span class="contact-value">p.das@uq.edu.au</span></a>
+      <a class="contact-item" href="https://github.com/pkd-45" target="_blank" rel="noopener"><span class="contact-label">GitHub</span><span class="contact-value">github.com/pkd-45</span></a>
+      <a class="contact-item" href="https://orcid.org/0000-0002-4326-8598" target="_blank" rel="noopener"><span class="contact-label">ORCID</span><span class="contact-value">0000-0002-4326-8598</span></a>
+      <a class="contact-item" href="https://www.linkedin.com/in/pratyush-kumar-das-a517311a1/" target="_blank" rel="noopener"><span class="contact-label">LinkedIn</span><span class="contact-value">pratyush-kumar-das-a517311a1</span></a>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner"><p>© <span id="year"></span> Pratyush Kumar Das · Built for GitHub Pages</p></div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
